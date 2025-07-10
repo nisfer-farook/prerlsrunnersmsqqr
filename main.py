@@ -88,10 +88,10 @@ def log_activity(user_email, phone, msg, response_text):
         f.write(f"[{timestamp}] To: {phone} | Message: {msg[:50].replace(chr(10), ' ')}... | Response: {response_text}\n")
 
 def send_email_otp(recipient_email, otp_code):
-    email_subject = "Your One-Time Password (OTP) for Ozone SMS Sender"
-    email_body = f"Hello,\n\nYour one-time password is: {otp_code}\n\nThis code is valid for 5 minutes."
+    email_subject = "Your One-Time Password (OTP) for IZ SMS"
+    email_body = f"Hello User,\n\nYour one-time password is to verify IZ SMS is: {otp_code}\n\nThis code is valid for 5 minutes.Please Don't share this code with anyone."
     em = EmailMessage()
-    em['From'] = f"Ozone SMS Sender <{SMTP_EMAIL}>"
+    em['From'] = f"IZ SMS <{SMTP_EMAIL}>"
     em['To'] = recipient_email
     em['Subject'] = email_subject
     em.set_content(email_body)
