@@ -240,4 +240,4 @@ if __name__ == '__main__':
     print(f"Groq API Key loaded: {'Yes' if GROQ_API_KEY else 'No'}")
     print(f"SMTP Email configured: {'Yes' if SMTP_EMAIL else 'No'}")
     print("Starting server on http://0.0.0.0:8080")
-    app.run(host='0.0.0.0', port=8080, debug=False)
+    app.run(host='0.0.0.0', port=8000, debug=False)
