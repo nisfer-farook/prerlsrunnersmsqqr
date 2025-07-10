@@ -239,5 +239,5 @@ if __name__ == '__main__':
     print(f"Ozone Client ID loaded: {'Yes' if CLIENT_ID else 'No'}")
     print(f"Groq API Key loaded: {'Yes' if GROQ_API_KEY else 'No'}")
     print(f"SMTP Email configured: {'Yes' if SMTP_EMAIL else 'No'}")
-    print("Starting server on http://0.0.0.0:5837")
-    app.run(host='0.0.0.0', port=5837, debug=False)
+    print("Starting server on http://0.0.0.0:8080")
+    app.run(host='0.0.0.0', port=8080, debug=False)
