@@ -333,7 +333,7 @@ def handle_beautify_request():
     try:
         chat_completion = groq_client.chat.completions.create(
             messages=[{"role": "system", "content": prompt}, {"role": "user", "content": original_message}],
-            model="llama3-70b-8192", temperature=0.3, max_tokens=250
+            model="meta-llama/llama-4-scout-17b-16e-instruct", temperature=0.3, max_tokens=250
         )
         beautified_text = chat_completion.choices[0].message.content.strip()
         if len(beautified_text) > 200:
@@ -365,3 +365,4 @@ if __name__ == '__main__':
     print("Starting server on http://0.0.0.0:8000")
     print("-> To edit configuration, visit http://<your_server_ip>:8000/change")
     app.run(host='0.0.0.0', port=8000, debug=False)
+
